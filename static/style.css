@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url("/static/ds_bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Overlay */
+.overlay {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9));
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* MAIN TITLE */
+h1 {
+    font-size: 56px;
+    font-family: 'Pacifico', cursive; /* handwriting */
+    color: #00c6ff;
+    letter-spacing: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #e0e0e0;
+}
+
+/* Input */
+input {
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    width: 280px;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    padding: 14px 25px;
+    border-radius: 12px;
+    border: none;
+    margin-left: 10px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(18px);
+    padding: 25px;
+    border-radius: 18px;
+    width: 170px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Card text */
+.card h3 {
+    font-size: 20px;
+    color: #00e6e6;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Graph */
+.graph {
+    margin-top: 40px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #bbb;
+}

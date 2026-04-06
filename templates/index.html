@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+    <div class="container">
+
+        <h1>📊 Stock Market Dashboard</h1>
+
+        <form method="POST" onsubmit="showLoader()">
+            <input type="text" name="stock" placeholder="Enter stocks (AAPL, TSLA)" required>
+            <button type="submit">Analyze</button>
+        </form>
+
+        <!-- Loader -->
+        <div id="loader" style="display:none;">⏳ Loading...</div>
+
+        {% if plot %}
+        <h2 class="subtitle">
+            Stock: {{ stock_name }} | Date: {{ today_date }}
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💰 Price</h3>
+                <p>{{ price }}</p>
+            </div>
+
+            <div class="card">
+                <h3>📈 High</h3>
+                <p>{{ high }}</p>
+            </div>
+
+            <div class="card">
+                <h3>📉 Low</h3>
+                <p>{{ low }}</p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Trend</h3>
+                <p>{{ trend }}</p>
+            </div>
+
+        </div>
+
+        <img src="{{ plot }}" class="graph">
+        {% endif %}
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Stock Analyzer | Data Science Project</p>
+    </footer>
+</div>
+
+<script>
+function showLoader() {
+    document.getElementById("loader").style.display = "block";
+}
+</script>
+
+</body>
+</html>
